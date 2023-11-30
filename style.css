@@ -1,0 +1,23 @@
+nav {
+    background: #d8d8d8;
+    font-weight: bold;
+    float: left;
+    height: auto;
+    padding-right: 24px;
+    margin-right: 10px;
+    padding: 2px 5px;
+    background: #ebeeef;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.navlinks{
+    display: block;
+    border: 2px solid #a1a1a1;
+    padding: 2px 5px;
+    background: #d6dadb;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #888888;
+}
