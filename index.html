@@ -1,25 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Ninety-nine Cans of Coke</title>
 <style>
-    body {
-        background-color: aqua;
-    }
-</style>
-<style>
-    img {
-  border: 5px solid #3f3d3d;
+body {
+  font-family: Georgia, serif;
+  text-align: center;
+}
+h1 {
+  font-size: 30px;
+}
+#one {
+  font-size: 16px;
+  font-style: italic;
+  color: red;
+}
+#two {
+  font-size: 24px;
+  color: purple;
+  
 }
 </style>
-<html>
-    <head> 
-        <meta charset="utf-8">
-        <title> conrad's homepage</title>
-        <a href="about_me.html">about me</a>
-        <a href="HeadFirstLounge/lounge.html">the head first lounge</a>
-    </head>
-    <body>
-        <h1>conrad's homepage</h1>
-        <img src="motivation.jpeg" alt="moticational image" height="200" width="325" >
-        <p> my personal motivational quote</p>
-    </body>
-</html> 
+  <script>
+  function init() {
+    var loc = window.location.href;
+    var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+    var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                          loc + '?profile=css3';
+    document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+    document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+  }
+  window.onload = init;
+  </script>
+</head>
+<body>
+<header>
+<h1>Ninety-nine Cans of Coke</h1>
+</header>
+<main id=lyrics>
+
+</main>
+<footer>
+<hr>
+<a id="vLink1"><strong> HTML </strong> Valid! </a> |
+<a id="vLink2"><strong> CSS </strong> Valid! </a>
+</footer>
+<script>
+let drink = "Coke";
+let cans = 99;
+let fonta = 20;
+let lyrics = ''
+let alternater = 1
+  
+while (cans > 0) {
+if (cans > 1) {
+  if(alternater > 0) {
+
+    lyrics += "<hr>"
+    lyrics += "<p id=one>"
+    lyrics += cans + " cans of " + drink + " on the wall <br>";
+    lyrics += cans + " cans of " + drink + " on the wall <br>";
+    lyrics += "Take one down, pass it around, <br>";
+    lyrics += "</p>"
+    
+    alternater -= 1;
+  }
+  else {
+    lyrics += "<p id=two>"
+    lyrics += cans + " cans of " + drink + " on the wall <br>";
+    lyrics += cans + " cans of " + drink + " on the wall <br>";
+    lyrics += "Take one down, pass it around, <br>";
+    lyrics += "</p>"
+    alternater += 1
+  }
+}
+else {
+  lyrics += "<hr>"
+  lyrics += "<p id=one>"
+  lyrics += cans + " cans of " + drink + " on the wall <br>";
+  lyrics += cans + " cans of " + drink + " on the wall <br>";
+  lyrics += "Take one down, pass it around, <br>";
+  lyrics += "</p>"
+  lyrics += "<p id=two>"
+  lyrics += "No more cans of " + drink + " on the wall <br>";
+  lyrics += "</p>"
+}
+cans = cans - 1
+}
+document.getElementById("lyrics").innerHTML = lyrics;
+document.getElementById("lyrics").style.fontSize = fonta + "px";
+</script>
+</body>
+</html>
