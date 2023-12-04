@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>javascript examples</title>
+</head>
+<body>
+    <h1>javascript Examples</h1>
+    <p>check the console section of inspect element</p>
+</body>
+<script>
+    {
+    let temp = 98.6;
+    temp = (temp - 32) * 5 / 9;
+    console.log(temp)
+    }
+    {
+    let motto = "I Rule";
+    motto = motto + " and so do you!"; 
+    console.log(motto)
+    }
+    let beanCounter = 4;
+    while (beanCounter > 0){
+        let pos = Math.random(1,10);
+        console.log(pos);
+        beanCounter --
+    }
+    let reallyCool = true;
+    if (reallyCool){
+        invite = "your invited"}
+    else{
+        invite = "your not invited"
+    }
+    console.log(invite)
+    {
+        let totalScoops = prompt("how many total scoops are there?:");
+        let people = prompt("how many people are there")
+        // prompt is a fine way of getting input but if the user dose not have the tab active while it is loading once the site is loaded the user will not get the prompt
+        parseFloat(totalScoops,10)
+        parseFloat(people,10)
+        let scoops = totalScoops / people;
+        console.log(scoops)
+    }
+    {
+        let scoops = Math.random() * 10;
+        console.log(scoops)
+    }
+
+</script>
