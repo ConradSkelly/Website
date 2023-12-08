@@ -5,8 +5,17 @@
 <title>javascript examples</title>
 </head>
 <body>
+    <a href="chapeter2_example_code">chapter 2 html example code</a>
     <h1>javascript Examples</h1>
     <p>check the console section of inspect element</p>
+    <p>we place elements in the head of your HTML to have them executed before the page loads if you place it in the body then it loads with the webpage</p>
+    <p>javascript is used for webpages</p>
+    <p>javascript differs form c and c++  in the fact that javascript is dynamic typed which allows variables to change during runtime</p>
+    <p>the main difference between var and let is that var is defined globally while let is defined locally</p>
+    <p>java applet was a language that was used for webpages but stoped being used becuase of the relience on plugins security reasons and preformace issues</p>
+    <P>object element are used provide a way to embed multimedia or other types of content in a web page while offering fallback content for browsers that do not support the embedded resource.</P>
+    <p> An expression is any valid set of literals, variables, operators, and expressions that evaluates to a single value.</p>
+    <p>You cant mess with the DOM until the page has fully loaded.</p>
 </body>
 <script>
     {
@@ -33,17 +42,62 @@
     }
     console.log(invite)
     {
-        let totalScoops = prompt("how many total scoops are there?:");
-        let people = prompt("how many people are there")
+        //let totalScoops = prompt("how many total scoops are there?:");
+        //let people = prompt("how many people are there")
         // prompt is a fine way of getting input but if the user dose not have the tab active while it is loading once the site is loaded the user will not get the prompt
-        parseFloat(totalScoops,10)
-        parseFloat(people,10)
-        let scoops = totalScoops / people;
-        console.log(scoops)
+        //parseFloat(totalScoops,10)
+        //parseFloat(people,10)
+       // let scoops = totalScoops / people;
+        //console.log(scoops)
     }
     {
         let scoops = Math.random() * 10;
         console.log(scoops)
+    } 
+    {
+    console.log(2>3)
+    console.log(true)// in javascript you write booleans without the first letter capitalized
+    // An expression is any valid set of literals, variables, operators, and expressions that evaluates to a single value.
+    //console.log("todays temp is "+ temp) this does not work because temp is not defined in the {} this line of code so to javascript temp is unknow even if its defiend above
     }
+    {
+        let message = 2 + " if by sea";//in javascript you don't have to make this 2 into a string javascript just makes it into a string
+        console.log(message)
+        let value = 3*2.1// same this this javascript turns this into a float so you don't get a error
+        console.log(value)
+        let numORString1 = "3" + "4"//this value is being cancatinated this type is a string
+        let numORString2 = "3" * "4"//this is being added which changes the type to a int
+        console.log(numORString1,numORString2)
+    }
+    {
+       let scoops = 10; 
+       //while (scoops >= 0); i dont know why but haveing these lines not comented makes the site not load 
+      // scoops = scoops - 1;
+      // if (scoops >= 9);
+      //  console.log("eat more ice cream there are " + scoops + " left");
+      // if (scoops = 2);
+      //  console.log("we only have " + scoops + " left")
+    }
+
+        let tempByHour = [59.2, 60.1, 63, 65, 62];
+        tempByHour[5] = 61
+        for (let i in tempByHour ){
+        console.log("the current temp is " + tempByHour[i] )
+    }
+    function makePhrases() {
+    let words1 = ["24/7", "multi-Tier", "30,000 foot", "B-to-B", "win-win"];
+    let words2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
+    let words3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+
+    let rand1 = Math.floor(Math.random() * words1.length);
+    let rand2 = Math.floor(Math.random() * words2.length); 
+    let rand3 = Math.floor(Math.random() * words3.length);
+
+    let phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
+
+    let phraseElement = document.getElementById("phrase"); 
+    phraseElement.innerHTML = phrase;
+    }
+    window.onload = makePhrases;
 
 </script>
