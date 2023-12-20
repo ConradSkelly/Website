@@ -18,9 +18,7 @@ function handleButtonClick() {
 
     if (isNaN(guess) || guess < 1 || guess > 100) {
         alert("Please enter a valid guess between 1 and 100.");
-    }
-
-    if (guess === theNumber) {
+    } else if (guess === theNumber) {
         alert("Congratulations! You guessed the number.");
         let playAgain = prompt("Do you want to play again? Enter 'yes' or 'no'");
         if (playAgain === "yes") {
@@ -56,7 +54,7 @@ function addValidationLinks() {
 
 
     document.body.appendChild(htmlLink);
-    document.body.appendChild(document.createElement("br")); 
+    document.body.appendChild(document.createElement("br"));
     document.body.appendChild(cssLink);
 }
 
