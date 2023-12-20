@@ -2,27 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title> JavaScript Guessing Game </title>
-    <script src = "guessingGame.js"> </script>
+    <title>Guessing Game</title>
+    <meta charset="utf-8">
+    <script src="guessingGame.js"></script>
 </head>
 
 <body>
     <h1>Guess the Number!</h1>
-    <p>I am thinking of a number between 1 and 100. Can you guess what it is?</p>
-
+    <p>I am thinking of a number between 1 & 100</p>
     <form>
-        <label for="guess">My Guess</label>
-        <input type="number" id="guess">
-        <input type="submit" id="addButton" value="Check Guess">
+        <input type="number" id="guess" size="40" placeholder="Guess">
+        <input type="button" id="addButton" value="check guess">
     </form>
-    <ul id ="guesses">
-
+    <ul id="guesses">
     </ul>
-
-    <p id="feedback"></p>
-
-
 </body>
-
-</html>
