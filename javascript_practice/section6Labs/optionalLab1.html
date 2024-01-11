@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Optional Lab 6-1</title>
+        <script>
+            function vote() {
+                let t = "Your favorite genre is: ";
+                for (i = 0; i < document.myform.sports.length; i++) {
+                    if (document.myform.sports[i].checked == true) {
+                        t = t + document.myform.sports[i].value;
+                    }
+                }
+                if (t == "Your favorite music is: ") {
+                    document.getElementById("txt").value = "Choose a genre";
+                } else {
+                    document.getElementById("txt").value = t;
+                    document.getElementById("txt1").value = t;
+                    document.getElementById("txt2").value = t;
+                }
+            }
+            function upperCase() {
+                let x = document.getElementById("txt").value;
+                document.getElementById("txt").value = x.toUpperCase();
+            }
+            function SayHello() {
+                alert("Your mouse is over the text!");
+            }
+            function SayGoodbye() {
+                alert("Your mouse has left the text!");
+            }
+            function diffrentOption(){
+                c="Your favorite genre is: "
+                t=prompt("whats the gernre? ")
+                ct= c+t
+                document.getElementById("txt").value = ct;
+                document.getElementById("txt1").value = ct;
+                document.getElementById("txt2").value = ct;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h3>CIW Advanced HTML5 and CSS3 Specialist</h3>
+        <hr/>
+        <h4>Event Handler Examples</h4>
+        Choose your favorite music:
+        <form name="myform">
+            <input type="radio" name="sports" value="Football" />jazz<br/>
+            <input type="radio" name="sports" value="Hockey" />pop<br />
+            <input type="radio" name="sports" value="Auto Racing" />rock & roll<br/>
+            <input type="radio" name="sports" value="MMA" />classical<br/>
+            <input type="radio" name="sports" value="Basketball" />heavy metal<br/>
+            <input type="radio" name="sports" value="Tennis" />country<br/>
+            <input type="radio" name="sports" value="Golf" />jpop<br/>
+            <p><input type="button" value="VOTE" onclick="vote()" /> <input type="reset" value="RESET" /></p>
+            <p><input type="text" id="txt" size="40" onblur="upperCase()" /> Click in then out!</p>
+            <p><input type="text" id="txt1" size="40" onmouseover="SayHello()" /> Hover over this field!</p>
+            <p><input type="text" id="txt2" size="40" onmouseout="SayGoodbye()" /> Hover this field then away!</p>
+            <p><input type="button" value="Have a favorite gernre thats not listed press this button" onclick="diffrentOption()" />
+
+        </form>
+    </body>
+</html>
