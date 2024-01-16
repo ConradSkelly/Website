@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <title>Improved Radio Form</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.forms['radioExampleForm'];
+
+            document.getElementById('showCheckedValueBtn').addEventListener('click', function () {
+                var checkedValue = getCheckedValue(form.elements['number']);
+                if (checkedValue !== "") {
+                    alert('Checked value is: ' + checkedValue);
+                } else {
+                    alert('Please select a number.');
+                }
+            });
+
+            document.getElementById('setCheckedToTwoBtn').addEventListener('click', function () {
+                setCheckedValue(form.elements['number'], '2');
+            });
+
+            document.getElementById('setCheckedToFourBtn').addEventListener('click', function () {
+                setCheckedValue(form.elements['number'], '4');
+            });
+
+            document.getElementById('uncheckAllBtn').addEventListener('click', function () {
+                setCheckedValue(form.elements['number'], '');
+            });
+        });
+
+        function getCheckedValue(radioObj) {
+            if (!radioObj)
+                return "";
+            var radioLength = radioObj.length;
+            if (radioLength == undefined)
+                if (radioObj.checked)
+                    return radioObj.value;
+                else return "";
+            for (var i = 0; i < radioLength; i++) {
+                if (radioObj[i].checked) {
+                    return radioObj[i].value;
+                }
+            }
+            return "";
+        }
+
+        function setCheckedValue(radioObj, newValue) {
+            if (!radioObj)
+                return;
+            var radioLength = radioObj.length;
+            if (radioLength == undefined) {
+                radioObj.checked = radioObj.value == newValue.toString();
+                return;
+            }
+            for (var i = 0; i < radioLength; i++) {
+                radioObj[i].checked = false;
+                if (radioObj[i].value == newValue.toString()) {
+                    radioObj[i].checked = true;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>CIW Advanced HTML5 and CSS3 Specialist</h2>
+    <h3>JavaScript Get or Set Checked Radio Value</h3>
+    <form name="radioExampleForm" method="get" action="">
+        <p>
+            <label for="number0"> <input type="radio" value="0" name="number" /> Zero</label>
+            <label for="number1"> <input type="radio" value="1" name="number" /> One</label>
+            <label for="number2"> <input type="radio" value="2" name="number" /> Two</label>
+            <label for="number3"> <input type="radio" value="3" name="number" /> Three</label>
+            <label for="number4"> <input type="radio" value="4" name="number" /> Four</label>
+        </p>
+        <p>
+            <input type="button" id="showCheckedValueBtn" value="Show Checked Value" />
+            <input type="button" id="setCheckedToTwoBtn" value="Set Checked to Two" />
+            <input type="button" id="setCheckedToFourBtn" value="Set Checked to Four" />
+            <input type="button" id="uncheckAllBtn" value="Uncheck All" />
+        </p>
+    </form>
+</body>
+
+</html>
