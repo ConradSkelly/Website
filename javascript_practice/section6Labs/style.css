@@ -25,12 +25,3 @@ label {
     padding: 8px;
     margin-right: 10px;
 }
-
-input[type="button"] {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
