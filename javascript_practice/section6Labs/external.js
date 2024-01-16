@@ -1,7 +1,7 @@
-var correct = 0;
+let correct = 0;
 
 function startTest() {
-    var questions = [
+    let questions = [
         { question: "What company developed JavaScript?", answer: "NETSCAPE" },
         { question: "Using JavaScript operator precedence, what is the result of the following expression? 2 + 4 * 6", answer: 26 },
         { question: "With what object-oriented programming language is JavaScript often compared and confused?", answer: "JAVA" }
@@ -9,7 +9,7 @@ function startTest() {
 
     shuffleArray(questions);
 
-    for (var i = 0; i < questions.length; i++) {
+    for (let i = 0; i < questions.length; i++) {
         askQuestion(questions[i].question, questions[i].answer);
     }
 
@@ -18,7 +18,7 @@ function startTest() {
 }
 
 function askQuestion(question, answer) {
-    var response = prompt(question, "");
+    let response = prompt(question, "");
     if (response) {
         correct += (response.toUpperCase() == answer.toString().toUpperCase()) ? 1 : 0;
         alert("Current Score: " + correct);
@@ -26,9 +26,9 @@ function askQuestion(question, answer) {
 }
 
 function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }

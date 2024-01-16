@@ -7,10 +7,10 @@
     <title>Improved Radio Form</title>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var form = document.forms['radioExampleForm'];
+            let form = document.forms['radioExampleForm'];
 
             document.getElementById('showCheckedValueBtn').addEventListener('click', function () {
-                var checkedValue = getCheckedValue(form.elements['number']);
+                let checkedValue = getCheckedValue(form.elements['number']);
                 if (checkedValue !== "") {
                     alert('Checked value is: ' + checkedValue);
                 } else {
@@ -34,12 +34,12 @@
         function getCheckedValue(radioObj) {
             if (!radioObj)
                 return "";
-            var radioLength = radioObj.length;
+            let radioLength = radioObj.length;
             if (radioLength == undefined)
                 if (radioObj.checked)
                     return radioObj.value;
                 else return "";
-            for (var i = 0; i < radioLength; i++) {
+            for (let i = 0; i < radioLength; i++) {
                 if (radioObj[i].checked) {
                     return radioObj[i].value;
                 }
@@ -50,12 +50,12 @@
         function setCheckedValue(radioObj, newValue) {
             if (!radioObj)
                 return;
-            var radioLength = radioObj.length;
+            let radioLength = radioObj.length;
             if (radioLength == undefined) {
                 radioObj.checked = radioObj.value == newValue.toString();
                 return;
             }
-            for (var i = 0; i < radioLength; i++) {
+            for (let i = 0; i < radioLength; i++) {
                 radioObj[i].checked = false;
                 if (radioObj[i].value == newValue.toString()) {
                     radioObj[i].checked = true;
