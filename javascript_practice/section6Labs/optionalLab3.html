@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Conversation</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 
 <script src="externaljs.js"></script>
-
-<button onclick="startConversation()">Start Conversation</button>
-
+<div class="middle">
+    <button id="" onclick="startConversation()">Start Conversation</button>
+</div>
 <script>
     function init() {
         var loc = window.location.href;
@@ -22,21 +22,22 @@
     }
     window.onload = init;
 </script>
-<div style="text-align: center;">
-    <hr>
-    <a id="vLink1" href="http://validator.w3.org/check?uri=https://conradskelly.github.io/Computer_Parts/index.html">
-        <strong> HTML </strong>
-        Valid!
-    </a>
-    |
-    <a id="vLink2"
-        href="http://jigsaw.w3.org/css-validator/validator?uri=https://conradskelly.github.io/Computer_Parts/index.html?profile=css3">
-        <strong> CSS </strong>
-        Valid!
-    </a>
-</div>
+
 </body>
 
-</html>
-</body>
+<footer>
+    <div style="text-align: center;" class="bottom">
+        <hr>
+        <a id="vLink1" href="http://validator.w3.org/check?uri=https://conradskelly.github.io/Computer_Parts/index.html">
+            <strong> HTML </strong>
+            Valid!
+        </a>
+        |
+        <a id="vLink2"
+            href="http://jigsaw.w3.org/css-validator/validator?uri=https://conradskelly.github.io/Computer_Parts/index.html?profile=css3">
+            <strong> CSS </strong>
+            Valid!
+        </a>
+    </div>
+</footer>
 </html>
