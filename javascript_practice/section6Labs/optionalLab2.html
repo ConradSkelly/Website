@@ -12,9 +12,9 @@
             document.getElementById('showCheckedValueBtn').addEventListener('click', function () {
                 let checkedValue = getCheckedValue(form.elements['number']);
                 if (checkedValue !== "") {
-                    alert('Checked value is: ' + checkedValue);
+                    console.log('Checked value is: ' + checkedValue);
                 } else {
-                    alert('Please select a number.');
+                    console.log('Please select a number.');
                 }
             });
 

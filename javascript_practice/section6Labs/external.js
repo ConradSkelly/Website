@@ -13,7 +13,7 @@ function startTest() {
         askQuestion(questions[i].question, questions[i].answer);
     }
 
-    alert("You got " + correct + " right out of " + questions.length);
+    console.log("You got " + correct + " right out of " + questions.length);
     correct = 0;
 }
 
@@ -21,7 +21,7 @@ function askQuestion(question, answer) {
     let response = prompt(question, "");
     if (response) {
         correct += (response.toUpperCase() == answer.toString().toUpperCase()) ? 1 : 0;
-        alert("Current Score: " + correct);
+        console.log("Current Score: " + correct);
     }
 }
 
