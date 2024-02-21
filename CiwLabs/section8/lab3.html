@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: #3c4c55;
+            color: #ffebc3;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset name="personal_info">
+            <legend>Personal Information:</legend>
+            <p>
+                <label for="first">First name: </label>
+                <input type="text" name="firstname" id="first" />
+            </p>
+            <p>
+                <label for="last">Last name: </label>
+                <input type="text" name="lastname" id="last" />
+            </p>
+            <p>
+                <label for="db">Date of Birth: </label>
+                <input type="date" name="dob" id="db" />
+            </p>
+            <p>
+                <label for="cont">Your Continent: </label>
+                <input list="continents" name="continent" id="cont" />
+                <datalist id="continents">
+                    <option value="North America"> </option>
+                    <option value="South America"> </option>
+                    <option value="Europe"> </option>
+                    <option value="Asia"> </option>
+                    <option value="Africa"> </option>
+                    <option value="Australia"> </option>
+                    <option value="Antarctica"> </option>
+                </datalist>
+            </p>
+        </fieldset>
+        <fieldset name="other-information">
+            <legend>Other Information:</legend>
+            <p>
+                <label for="tech">How many technologies do you know?: 0 </label>
+                <input type="range" name="technologies" min="0" max="50" value="25" id="tech" /> 10+
+            </p>
+            <p>
+                <label for="num">Age of user: </label>
+                <input type="number" name="age" min="1" max="100" id="num" />
+            </p>
+        </fieldset>
+        <fieldset name="fun">
+            <legend>Fun:</legend>
+            <p>
+                <label for="tech">How many pets do you own?: 0 </label>
+                <input type="range" name="technologies" min="0" max="50" value="25" id="tech" /> 20+
+            </p>
+            <p>
+                <label> favorite animal </label>
+                <input type="text" name="pet name" id=" fav pet name" />
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
